@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Live Project</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="screen" onclick="toggleMenu()"></div>
+    <div class="screen-modal" onclick="toggleModal()"></div>
+    <header class="main-nav-top">
+        <nav class="main-nav-container flex space-between align-center container">
+            <div class="logo-nav">Blogin<span>.</span></div>
+            <ul class="main-nav clean-list flex align-center">
+                <div class="dropdown">
+                    <li><a class="active dropbtn" onClick="toggleSubMenu()" href="#">Journal</a>
+                        <div class="dropdown-content">
+                            <a href="#">October 2016</a>
+                            <a href="#">January 2017</a>
+                            <a href="#">April 2017</a>
+                            <a href="#">July 2017</a>
+                        </div>
+                </div>
+                </li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        </nav>
+    </header>
+    <main class="main-content container padding-top  border flex column align-center">
+        <div class="post flex">
+            <img src="/img/001.png" alt="">
+            <div class="post-details flex column space-between">
+                <h2 class="post-title">Duis aute irure dolor in
+                    henderit in voluptate.</h2>
+                <p class="post-bottom-content">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut
+                    aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p class="post-bottom-content">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu fugiat nulla
+                    pariatur...</p>
+                <button class="post-btn" onclick="toggleModal()" href="#open-modal">Continue Reading</button>
+            </div>
+        </div>
+        <div class="post flex">
+            <img src="/img/002.png" alt="">
+            <div class="post-details  flex column space-between">
+                <h2 class="post-title">Duis aute irure dolor in
+                    henderit in voluptate.</h2>
+                <p class="post-bottom-content">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut
+                    aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur...</p>
+                <button class="post-btn" onclick="toggleModal()" href="#open-modal">Continue Reading </button>
+            </div>
+        </div>
+        <div class="post flex">
+            <img src="/img/003.png" alt="">
+            <div class="post-details  flex column space-between">
+                <h2 class="post-title">Duis aute irure dolor in
+                    henderit in voluptate.</h2>
+                <p class="post-bottom-content">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut
+                    aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur...</p>
+                <button class="post-btn" onclick="toggleModal()" href="#open-modal">Continue Reading </button>
+            </div>
+        </div>
+    </main>
+    <section class="change-pages container border flex space-between">
+        <!-- <div class="prev-page"> -->
+        <!-- <img src="/img/prev-page.png" alt=""> -->
+        <button class="prev-btn">Previous</button>
+        </div>
+        <!-- <div class="next-page"> -->
+        <button class="next-btn">Next</button>
+        <!-- <img src="/img/next-page.png" alt=""> -->
+        </div>
+    </section>
+
+    <div class="modal-window" hidden>
+        <div class="flex space-between">
+            <!-- <h2 class="flex">Hey there!</h2> -->
+            <div>Join us to get access to the latest stories!</div>
+            <button onclick="toggleModal()">x</button>
+        </div>
+        <input type="email" placeholder="Enter your email">
+        <button onclick="toggleModal()">Submit</button>
+    </div>
+
+    <footer class="border">
+        <div class="logo-footer">Blogin<span>.</span></div>
+        <small>© 2014 Blogin.com - All Rights Reserved - Find more free Templates at
+            <span>Pixelhint.com</span>
+        </small>
+        <div class="footer-btns">
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-twitter-square"></i>
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-instagram-square"></i>
+            <!-- <button class="btn-linkedin"></button> -->
+            <!-- <button class="btn-instagram"></button> -->
+        </div>
+    </footer>
+
+    <script>
+
+        function toggleMenu() {
+            document.body.classList.toggle('menu-open');
+        }
+
+        function toggleModal() {
+            var elModal = document.querySelector('.modal-window');
+            elModal.hidden = (!elModal.hidden);
+            document.body.classList.toggle('modal-open');
+        }
+
+        function toggleSubMenu() {
+            var elDropdown = document.querySelector('.dropdown-content');
+            elDropdown.style.display = (elDropdown.style.display === 'block') ? 'none' : 'block';
+        }
+
+    </script>
+    <script src="https://kit.fontawesome.com/84627e2569.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
