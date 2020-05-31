@@ -167,7 +167,7 @@ a:hover {
     padding-right: 45px;
     color: #58c93a;
     border: 2px solid #58c93a;
-    background-image: url(img/continue-reading.png);
+    background-image: url(../img/continue-reading.png);
     background-repeat: no-repeat;
     background-position: 155px;
     transition: padding .3s;
@@ -195,7 +195,7 @@ a:hover {
 
 .prev-btn {
     padding-left: 20px;
-    background-image: url(img/prev-page.png);
+    background-image: url(../img/prev-page.png);
     background-repeat: no-repeat;
     background-position: center left;
     position: relative;
@@ -205,7 +205,7 @@ a:hover {
 
 .next-btn {
     padding-left: 20px;
-    background-image: url(img/next-page.png);
+    background-image: url(../img/next-page.png);
     background-repeat: no-repeat;
     background-position: center right;
     position: relative;
